@@ -26,7 +26,8 @@
 ├── main.js              # Processo principal do Electron
 ├── preload.js           # Comunicação entre frontend e backend
 ├── package.json         # Informações do projeto e dependências
-└── package-lock.json    # Travamento de versões
+├── package-lock.json    # Travamento de versões
+└── .gitignore           # Arquivos ignorados pelo Git
 
 ## ▶️ Como Executar
 
