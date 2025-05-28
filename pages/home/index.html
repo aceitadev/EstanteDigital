@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="window.electron.setWindow('home')">Estante Digital</h1>
+        <nav>
+            <a href="#" onClick="window.electron.setWindow('students')">Alunos</a>
+            <a href="#" onClick="window.electron.setWindow('books')">Livros</a>
+            <a href="#" onClick="window.electron.setWindow('loans')">Empréstimos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="title">
+            <h2>Sistema de Gestão de Biblioteca Escolar</h2>
+            <p>Gerencie empréstimos de livros, cadastros de alunos e mantenha o acervo organizado com facilidade.</p>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div onClick="window.electron.setWindow('students')" class="feature-card">
+                    <img src="../../assets/icons/users.png" alt="">
+                    <h3>Cadastro de Alunos</h3>
+                    <p>Registre e gerencie informações dos alunos da escola.</p>
+                </div>
+                <div onClick="window.electron.setWindow('books')" class="feature-card">
+                    <img src="../../assets/icons/book.png" alt="">
+                    <h3>Cadastro de Livros</h3>
+                    <p>Catalogue o acervo da biblioteca com detalhes completos.</p>
+                </div>
+                <div onClick="window.electron.setWindow('loans')" class="feature-card">
+                    <img src="../../assets/icons/calendar.png" alt="">
+                    <h3>Gestão de Empréstimos</h3>
+                    <p>Controle os empréstimos e devoluções de forma eficiente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <h2>Estatísticas da Biblioteca</h2>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <h1>Total de Alunos</h1>
+                        <span class="stats-blue" id="stats-students">0</span>
+                    </div>
+                    <div class="stats-card">
+                        <h1>Livros no Acervo</h1>
+                        <span class="stats-green" id="stats-books">0</span>
+                    </div>
+                    <div class="stats-card">
+                        <h1>Empréstimos Ativos</h1>
+                        <span class="stats-red" id="stats-leans">0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Estante Digital - Desenvolvido por Murilo 1º Ano C</p>
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </main>
+</body>
+
+</html>

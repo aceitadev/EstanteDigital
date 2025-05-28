@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Digital - Novo Empréstimo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="form-header">
+                <h1>Novo Empréstimo</h1>
+                <p>Preencha os campos abaixo para registrar um novo empréstimo</p>
+            </div>
+
+            <form id="loan-form">
+                <div class="form-group">
+                    <label for="student">Aluno</label>
+                    <div class="custom-select" id="student-select">
+                        <div class="selected">Selecione um aluno</div>
+                        <ul class="options" id="student-options">
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </ul>
+                        <input type="hidden" name="student" id="student" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="book">Livro</label>
+                    <div class="custom-select" id="book-select">
+                        <div class="selected">Selecione um livro</div>
+                        <ul class="options" id="book-options">
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </ul>
+                        <input type="hidden" name="book" id="book" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="due-date">Data de Devolução</label>
+                    <input id="due-date" type="date" required />
+                    <small>Prazo máximo para devolução do livro</small>
+                </div>
+
+                <div class="loan-summary">
+                    <h3>Resumo do Empréstimo</h3>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <span class="label">Aluno:</span>
+                            <span id="summary-student" class="value">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Livro:</span>
+                            <span id="summary-book" class="value">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Data de Empréstimo:</span>
+                            <span id="summary-loan-date" class="value">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Data de Devolução:</span>
+                            <span id="summary-due-date" class="value">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary"
+                        onClick='window.electron.setWindow("loans")'>Cancelar</button>
+                    <button type="submit" class="btn-primary" onClick="finish(event)">Registrar Empréstimo</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Estante Digital - Desenvolvido por Murilo 1º Ano C</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

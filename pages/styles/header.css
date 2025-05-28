@@ -1,0 +1,24 @@
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: calc(100vw - 10px);
+    padding: 1rem 20px;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+header h1 {
+    width: 170px;
+    height: 35px;
+    color: #1449BE;
+    font-size: 1.5rem;
+}

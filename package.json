@@ -1,0 +1,50 @@
+{
+  "name": "estante-digital",
+  "productName": "Estante Digital",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --disable-software-rasterizer --disable-gpu",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild": "electron-rebuild"
+  },
+  "keywords": [],
+  "author": "aceitadev",
+  "description": "Software desenvolvido para organização dos emprestimos de livros na biblioteca.",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.9.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "aceita.estantedigital",
+    "productName": "Estante Digital",
+    "files": [
+      "**/*",
+      "!node_modules/{@types,.cache}/**/*",
+      "!*.log"
+    ],
+    "extraResources": [
+      {
+        "from": "src/data",
+        "to": "data"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true
+    },
+    "asar": false,
+    "npmRebuild": false
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.9.1"
+  }
+}

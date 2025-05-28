@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="form-header">
+                <h1>Adicionar Livro</h1>
+                <p>Preencha os campos abaixo para adicionar um novo livro à sua estante digital</p>
+            </div>
+
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="name">Nome do Livro</label>
+                    <input id="name" type="text" placeholder="Digite o nome do livro" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Autor do Livro</label>
+                    <input id="author" type="text" placeholder="Digite o nome do autor" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Categoria</label>
+                    <div class="custom-select" id="category-select">
+                        <div class="selected">Selecione uma categoria</div>
+                        <ul class="options">
+                            <li data-value="Ficção">Ficção</li>
+                            <li data-value="Não-Ficção">Não-Ficção</li>
+                            <li data-value="Romance">Romance</li>
+                            <li data-value="Fantasia">Fantasia</li>
+                            <li data-value="Biografia">Biografia</li>
+                            <li data-value="História">História</li>
+                            <li data-value="Ciência">Ciência</li>
+                            <li data-value="Tecnologia">Tecnologia</li>
+                            <li data-value="Outro">Outro</li>
+                        </ul>
+                        <input type="hidden" name="category" id="category" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary"
+                        onClick='window.electron.setWindow("books")'>Cancelar</button>
+                    <button type="submit" class="btn-primary" onClick="finish(event)">Adicionar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Estante Digital - Desenvolvido por Murilo 1º Ano C</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
