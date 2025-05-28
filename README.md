@@ -12,6 +12,7 @@
 
 ## 📦 Estrutura do Projeto
 
+```plaintext
 ├── assets/              # Ícones e imagens da interface
 │   └── icons/           # Ícones do sistema (livro, lixeira, caneta etc.)
 ├── pages/               # Páginas HTML da aplicação
@@ -27,7 +28,7 @@
 ├── preload.js           # Comunicação entre frontend e backend
 ├── package.json         # Informações do projeto e dependências
 ├── package-lock.json    # Travamento de versões
-└── .gitignore           # Arquivos ignorados pelo Git
+````
 
 ## ▶️ Como Executar
 
@@ -35,7 +36,7 @@
 
 ```bash
 npm install
-````
+```
 
 2. **Inicie a aplicação:**
 
