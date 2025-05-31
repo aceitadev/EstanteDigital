@@ -18,7 +18,7 @@ function createMainWindow() {
         },
     })
 
-    //Menu.setApplicationMenu(null);
+    Menu.setApplicationMenu(null);
     win.loadFile(`pages/home/index.html`)
 }
 
