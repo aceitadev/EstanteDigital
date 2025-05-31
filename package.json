@@ -7,16 +7,16 @@
     "start": "electron . --disable-software-rasterizer --disable-gpu",
     "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rebuild": "electron-rebuild"
+    "rebuild": "npx @electron/rebuild -f -w better-sqlite3"
   },
   "keywords": [],
   "author": "aceitadev",
   "description": "Software desenvolvido para organização dos emprestimos de livros na biblioteca.",
   "license": "ISC",
   "devDependencies": {
+    "@electron/rebuild": "^4.0.1",
     "electron": "^27.0.0",
-    "electron-builder": "^24.9.0",
-    "electron-rebuild": "^3.2.9"
+    "electron-builder": "^24.9.0"
   },
   "build": {
     "appId": "aceita.estantedigital",
